@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Usando HTML CSS JS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="calendario">
+        <div class="calendario-body">
+            <span class="mes-nome"></span>
+            <span class="dia-nome"></span>
+            <span class="data-nome"></span>
+            <span class="ano"></span>
+        </div>
+    </div>
+
+    <script>
+        const diaNum = new Date().getDate();
+        const ano = new Date().getFullYear();
+        const diaNome = new Date().toLocaleString("default", {diasemana: "long"});
+        const mesNome = new Date().toLocaleString("default", {mes: "long"});
+
+        document.querySelector(".mes-nome").innerHTML = mesNome;
+        document.querySelector(".dia-nome").innerHTML = diaNome;
+        document.querySelector(".data-nome").innerHTML = diaNum;
+        document.querySelector(".ano").innerHTML = ano;
+
+    </script>
+    
+</body>
+</html>
